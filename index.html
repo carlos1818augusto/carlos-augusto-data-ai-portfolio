@@ -66,6 +66,7 @@
         </button>
 
         <nav class="main-nav" id="main-nav" aria-label="Navegação principal" data-i18n-aria="a11y.nav">
+          <a class="active" href="index.html" data-i18n="nav.home">Home</a>
           <a href="especialidades/" data-i18n="nav.expertise">Especialidades</a>
           <a href="projetos/" data-i18n="nav.projects">Projetos</a>
           <a href="ia/" data-copy-pt="IA aplicada" data-copy-en="Applied AI">IA aplicada</a>
@@ -136,6 +137,15 @@
             </div>
             <div class="float-card float-card-data">
               <span class="live-icon">✓</span><div><strong data-i18n="hero.pipeline">Pipeline ativo</strong><small>API → SQL → MODEL → BI</small></div>
+            </div>
+            <div class="hero-orb hero-orb-database" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg><span>SQL</span>
+            </div>
+            <div class="hero-orb hero-orb-bi" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg><span>BI</span>
+            </div>
+            <div class="hero-orb hero-orb-ml" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="5" r="2"/><circle cx="19" cy="12" r="2"/><circle cx="12" cy="19" r="2"/><path d="m6.5 10.5 4-4m3 0 4 4m0 3-4 4m-3 0-4-4"/></svg><span>ML</span>
             </div>
             <div class="hero-sticker" aria-hidden="true">BUILD<br />THE<br />WHOLE<br />SYSTEM.</div>
           </div>
@@ -383,42 +393,21 @@
         </div>
       </section>
 
-      <section class="career section-paper" id="trajetoria">
+      <section class="professional-method section-paper" id="abordagem">
         <div class="section-heading reveal">
-          <p class="section-index" data-i18n="career.index">05 — Trajetória profissional</p>
+          <p class="section-index" data-copy-pt="05 — Abordagem profissional" data-copy-en="05 — Professional approach">05 — Abordagem profissional</p>
           <div class="heading-grid">
-            <h2 data-i18n-html="career.title">Da infraestrutura à estratégia.<br /><em>Uma evolução consistente.</em></h2>
-            <p data-i18n="career.intro">Minha carreira avançou de sistemas e automação para analytics, engenharia e inteligência aplicada — sempre mantendo proximidade com a operação.</p>
+            <h2 data-copy-html-pt="Da complexidade à entrega.<br /><em>Um método consistente.</em>" data-copy-html-en="From complexity to delivery.<br /><em>A consistent method.</em>">Da complexidade à entrega.<br /><em>Um método consistente.</em></h2>
+            <p data-copy-pt="Meu trabalho não começa pela ferramenta. Estruturo cada desafio em descoberta, arquitetura, construção e evolução para entregar soluções confiáveis, compreensíveis e adotadas pelas pessoas." data-copy-en="My work does not begin with a tool. I structure every challenge through discovery, architecture, building and evolution to deliver solutions that are reliable, understandable and adopted by people.">Meu trabalho não começa pela ferramenta. Estruturo cada desafio em descoberta, arquitetura, construção e evolução.</p>
           </div>
         </div>
-
-        <div class="timeline">
-          <article class="timeline-item reveal">
-            <div class="timeline-date"><span data-i18n="career.current">FEV 2025 — ATUAL</span><i></i></div>
-            <div class="timeline-role"><small>NEOOH</small><h3>Full Business Intelligence Analyst</h3></div>
-            <div class="timeline-desc"><p data-i18n="career.neooh">BI financeiro, modelagem estatística, machine learning, dashboards de KPIs, orçamento, fluxo de caixa e rentabilidade em parceria com times financeiros e executivos.</p><div><span>Power BI</span><span>DAX</span><span>Finance</span><span>ML</span></div></div>
-          </article>
-          <article class="timeline-item reveal">
-            <div class="timeline-date"><span data-i18n="career.alvoradaDate">SET 2023 — FEV 2025</span><i></i></div>
-            <div class="timeline-role"><small>ALVORADA AMBIENTAL</small><h3>Data Analyst Pl</h3></div>
-            <div class="timeline-desc"><p data-i18n="career.alvorada">Análises preditivas e diagnósticas, dashboards conectados a APIs, soluções em Google Cloud e AWS e otimização de consultas para alta performance.</p><div><span>Python</span><span>R</span><span>APIs</span><span>Cloud</span></div></div>
-          </article>
-          <article class="timeline-item reveal">
-            <div class="timeline-date"><span data-i18n="career.rapidonetDate">JAN 2023 — SET 2023</span><i></i></div>
-            <div class="timeline-role"><small>RAPIDONET SISTEMAS</small><h3 data-i18n="career.softwareRole">Analista de Software</h3></div>
-            <div class="timeline-desc"><p data-i18n="career.rapidonet">Automação de dados com SQL Server, integração analítica com sistemas operacionais, algoritmos estatísticos e relatórios personalizados.</p><div><span>SQL Server</span><span>Automation</span><span>Statistics</span></div></div>
-          </article>
-          <article class="timeline-item reveal">
-            <div class="timeline-date"><span data-i18n="career.123Date">MAR 2021 — DEZ 2022</span><i></i></div>
-            <div class="timeline-role"><small>123MILHAS</small><h3 data-i18n="career.123Role">Técnico de TI → Data Analyst Jr</h3></div>
-            <div class="timeline-desc"><p data-i18n="career.123">Progressão de sistemas para dados: automações em JavaScript, relatórios com DAX e Power BI, pipelines em SQL e monitoramento executivo de KPIs.</p><div><span>JavaScript</span><span>SQL</span><span>Power BI</span><span>DAX</span></div></div>
-          </article>
-          <article class="timeline-item reveal">
-            <div class="timeline-date"><span data-i18n="career.premiumDate">MAI 2019 — MAR 2021</span><i></i></div>
-            <div class="timeline-role"><small>PREMIUM SAÚDE</small><h3 data-i18n="career.internRole">Estagiário de TI</h3></div>
-            <div class="timeline-desc"><p data-i18n="career.premium">Scripts em Node.js, relatórios avançados em SQL Server e colaboração multidisciplinar para aumentar a eficiência dos processos internos.</p><div><span>Node.js</span><span>SQL Server</span><span>Operations</span></div></div>
-          </article>
+        <div class="professional-grid">
+          <article class="professional-card reveal"><span>01 / DISCOVER</span><h3 data-copy-pt="Diagnóstico e contexto" data-copy-en="Discovery and context">Diagnóstico e contexto</h3><p data-copy-pt="Mapeio a decisão, os usuários, as fontes, as regras e as restrições antes de propor uma solução." data-copy-en="I map the decision, users, sources, rules and constraints before proposing a solution.">Mapeio decisão, usuários, fontes, regras e restrições.</p><small data-copy-pt="Entrevistas · Processos · Critérios de sucesso" data-copy-en="Interviews · Processes · Success criteria">Entrevistas · Processos · Critérios de sucesso</small></article>
+          <article class="professional-card reveal"><span>02 / DESIGN</span><h3 data-copy-pt="Arquitetura proporcional" data-copy-en="Fit-for-purpose architecture">Arquitetura proporcional</h3><p data-copy-pt="Escolho a abordagem pela necessidade: dashboard, pipeline, modelo preditivo, RAG ou agente — sem tecnologia por hype." data-copy-en="I choose the approach based on the need: dashboard, pipeline, predictive model, RAG or agent — never technology for hype.">Escolho a abordagem pela necessidade.</p><small>Data contracts · Security · Cost · Scale</small></article>
+          <article class="professional-card reveal"><span>03 / BUILD</span><h3 data-copy-pt="Construção com qualidade" data-copy-en="Quality-driven building">Construção com qualidade</h3><p data-copy-pt="Desenvolvo componentes modulares, testáveis e observáveis, conectando engenharia, analytics, ciência de dados e IA." data-copy-en="I develop modular, testable and observable components, connecting engineering, analytics, data science and AI.">Desenvolvo componentes modulares, testáveis e observáveis.</p><small>Quality · Evals · Documentation · Observability</small></article>
+          <article class="professional-card reveal"><span>04 / EVOLVE</span><h3 data-copy-pt="Adoção e evolução" data-copy-en="Adoption and evolution">Adoção e evolução</h3><p data-copy-pt="Entrego com documentação, métricas e ciclos de feedback para que a solução gere valor e continue evoluindo." data-copy-en="I deliver with documentation, metrics and feedback loops so the solution creates value and keeps evolving.">Entrego com documentação, métricas e ciclos de feedback.</p><small data-copy-pt="Adoção · Impacto · Melhoria contínua" data-copy-en="Adoption · Impact · Continuous improvement">Adoção · Impacto · Melhoria contínua</small></article>
         </div>
+        <div class="professional-cta reveal"><p data-copy-pt="Quer conhecer as experiências que formaram esse método?" data-copy-en="Want to see the experience behind this method?">Quer conhecer as experiências que formaram esse método?</p><a class="button button-primary" href="trajetoria/"><span data-copy-pt="Ver trajetória completa" data-copy-en="See full career journey">Ver trajetória completa</span><i>↗</i></a></div>
       </section>
 
       <section class="credentials">
@@ -426,7 +415,7 @@
           <p class="section-index" data-i18n="credentials.index">06 — Base técnica</p>
           <div class="heading-grid">
             <h2 data-i18n-html="credentials.title">Ferramentas mudam.<br /><em>Fundamentos permanecem.</em></h2>
-            <p data-i18n="credentials.intro">Formação em Sistemas de Informação, especialização em andamento e aprendizado contínuo em analytics, programação, cloud, machine learning e IA.</p>
+            <p data-i18n="credentials.intro">Formação em Sistemas de Informação, MBA concluído e aprendizado contínuo em analytics, programação, cloud, machine learning e IA.</p>
           </div>
         </div>
 
@@ -441,7 +430,7 @@
           <div class="education-column reveal">
             <p class="credential-label" data-i18n="credentials.education">FORMAÇÃO</p>
             <article><span>2020 — 2023</span><h3 data-i18n="credentials.degree">Bacharelado em Sistemas de Informação</h3><p>Estácio de Sá</p></article>
-            <article><span>2023 — 2026</span><h3 data-i18n="credentials.mba">Pós-graduação Lato Sensu — MBA</h3><p>DIO</p></article>
+            <article><span data-copy-pt="2023 — 2026 · CONCLUÍDO" data-copy-en="2023 — 2026 · COMPLETED">2023 — 2026 · CONCLUÍDO</span><h3 data-i18n="credentials.mba">Pós-graduação Lato Sensu — MBA (concluído)</h3><p>DIO</p></article>
             <div class="languages"><p class="credential-label" data-i18n="credentials.languages">IDIOMAS</p><span data-i18n="credentials.portuguese">Português · Nativo</span><span data-i18n="credentials.english">Inglês · Avançado</span><span data-i18n="credentials.spanish">Espanhol · Avançado</span></div>
           </div>
           <div class="certification-column reveal">

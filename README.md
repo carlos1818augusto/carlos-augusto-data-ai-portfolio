@@ -18,6 +18,9 @@ O site apresenta uma narrativa integrada de quatro disciplinas complementares:
 - Layout responsivo, acessível e sem dependências de framework
 - Arquitetura multipágina, com navegação dedicada para especialidades, projetos, IA, trajetória e contato
 - Retratos editoriais próprios para cada contexto, mantendo a foto original como referência
+- Seção de abordagem profissional: descoberta, arquitetura, construção, adoção e evolução
+- Contato flutuante via WhatsApp inspirado na experiência do site NEXO IA
+- MBA apresentado como concluído
 - Pronto para GitHub Pages
 
 ## Executar localmente

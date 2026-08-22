@@ -9,7 +9,7 @@ const translations = {
       language: 'Idioma', areas: 'Áreas de atuação', outcomes: 'Resultados em números', systemMap: 'Fluxo integrado de dados e inteligência',
       technologies: 'Tecnologias', close: 'Fechar',
     },
-    nav: { vision: 'Visão', expertise: 'Especialidades', projects: 'Projetos', career: 'Trajetória', about: 'Sobre', resume: 'Currículo' },
+    nav: { home: 'Home', vision: 'Visão', expertise: 'Especialidades', projects: 'Projetos', career: 'Trajetória', about: 'Sobre', resume: 'Currículo' },
     hero: {
       available: 'Aberto a oportunidades e projetos', eyebrow: 'Data & AI Specialist · Belo Horizonte, Brasil',
       title: 'Da fonte ao modelo.<br />Da <em>inteligência</em> à decisão.',
@@ -75,8 +75,8 @@ const translations = {
     },
     credentials: {
       index: '06 — Base técnica', title: 'Ferramentas mudam.<br /><em>Fundamentos permanecem.</em>',
-      intro: 'Formação em Sistemas de Informação, especialização em andamento e aprendizado contínuo em analytics, programação, cloud, machine learning e IA.',
-      education: 'FORMAÇÃO', degree: 'Bacharelado em Sistemas de Informação', mba: 'Pós-graduação Lato Sensu — MBA',
+      intro: 'Formação em Sistemas de Informação, MBA concluído e aprendizado contínuo em analytics, programação, cloud, machine learning e IA.',
+      education: 'FORMAÇÃO', degree: 'Bacharelado em Sistemas de Informação', mba: 'Pós-graduação Lato Sensu — MBA (concluído)',
       languages: 'IDIOMAS', portuguese: 'Português · Nativo', english: 'Inglês · Avançado', spanish: 'Espanhol · Avançado',
       certifications: 'CERTIFICAÇÕES SELECIONADAS', more: 'Também: SQL, R, Estatística, JavaScript, Java, Lógica de Programação e CSS3.',
     },
@@ -108,7 +108,7 @@ const translations = {
       language: 'Language', areas: 'Areas of expertise', outcomes: 'Results in numbers', systemMap: 'Integrated data and intelligence flow',
       technologies: 'Technologies', close: 'Close',
     },
-    nav: { vision: 'Vision', expertise: 'Expertise', projects: 'Projects', career: 'Career', about: 'About', resume: 'Resume' },
+    nav: { home: 'Home', vision: 'Vision', expertise: 'Expertise', projects: 'Projects', career: 'Career', about: 'About', resume: 'Resume' },
     hero: {
       available: 'Open to opportunities and projects', eyebrow: 'Data & AI Specialist · Belo Horizonte, Brazil',
       title: 'From source to model.<br />From <em>intelligence</em> to decision.',
@@ -171,8 +171,8 @@ const translations = {
     },
     credentials: {
       index: '06 — Technical foundation', title: 'Tools change.<br /><em>Fundamentals remain.</em>',
-      intro: 'A degree in Information Systems, an ongoing postgraduate program and continuous learning in analytics, programming, cloud, machine learning and AI.',
-      education: 'EDUCATION', degree: "Bachelor's Degree in Information Systems", mba: 'Postgraduate Specialization — MBA',
+      intro: 'A degree in Information Systems, a completed MBA and continuous learning in analytics, programming, cloud, machine learning and AI.',
+      education: 'EDUCATION', degree: "Bachelor's Degree in Information Systems", mba: 'Postgraduate Specialization — MBA (completed)',
       languages: 'LANGUAGES', portuguese: 'Portuguese · Native', english: 'English · Advanced', spanish: 'Spanish · Advanced',
       certifications: 'SELECTED CERTIFICATIONS', more: 'Also: SQL, R, Statistics, JavaScript, Java, Programming Logic and CSS3.',
     },
@@ -317,6 +317,10 @@ function translatePage(language) {
       ? `${base}assets/docs/curriculo-carlos-augusto-pt.pdf`
       : `${base}assets/docs/carlos-augusto-resume-en.pdf`;
   });
+  document.querySelector('.float-contact')?.setAttribute(
+    'aria-label',
+    language === 'pt' ? 'Falar com Carlos no WhatsApp' : 'Chat with Carlos on WhatsApp',
+  );
 
   try { localStorage.setItem('portfolio-language', language); } catch (_) {}
 }
@@ -331,6 +335,15 @@ try {
   if (savedLanguage === 'pt' || savedLanguage === 'en') initialLanguage = savedLanguage;
   else if (navigator.language?.toLowerCase().startsWith('en')) initialLanguage = 'en';
 } catch (_) {}
+
+const floatingContact = document.createElement('a');
+floatingContact.className = 'float-contact';
+floatingContact.href = 'https://wa.me/5531999862641?text=Ol%C3%A1%20Carlos%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar.';
+floatingContact.target = '_blank';
+floatingContact.rel = 'noopener noreferrer';
+floatingContact.setAttribute('aria-label', 'Falar com Carlos no WhatsApp');
+floatingContact.innerHTML = '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span data-copy-pt="Falar no WhatsApp" data-copy-en="Chat on WhatsApp">Falar no WhatsApp</span>';
+document.body.append(floatingContact);
 translatePage(initialLanguage);
 
 const header = document.querySelector('[data-header]');
