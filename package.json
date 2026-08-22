@@ -1,0 +1,11 @@
+{
+  "name": "carlos-augusto-data-ai-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/site-integrity.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
