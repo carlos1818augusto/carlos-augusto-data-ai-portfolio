@@ -39,8 +39,8 @@ body:hover .cursor-glow { opacity: 1; }
 .site-header.scrolled { border-color: var(--line-dark); background: rgba(9, 10, 14, .84); backdrop-filter: blur(18px); }
 .header-inner { width: var(--container); height: 82px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 26px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; flex: 0 0 auto; }
-.brand-mark { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; background: var(--blue); box-shadow: 0 10px 30px rgba(37,87,255,.28); font-size: 14px; font-weight: 800; letter-spacing: -.04em; transform: rotate(-3deg); }
-.brand-mark span { color: var(--lime); }
+.brand-mark { display: inline-grid; place-items: center; width: 42px; height: 42px; overflow: hidden; border-radius: 13px; background: url("assets/brand/carlos-ai-mark.png") center/cover no-repeat; box-shadow: 0 10px 30px rgba(37,87,255,.34); color: transparent; font-size: 0; transform: none; }
+.brand-mark span { display: none; }
 .brand-copy { display: flex; flex-direction: column; gap: 2px; }
 .brand-copy strong { font-size: 13px; letter-spacing: -.02em; }
 .brand-copy small { color: #747780; font: 400 8px/1 "DM Mono", monospace; letter-spacing: .12em; text-transform: uppercase; }
@@ -311,6 +311,16 @@ body:hover .cursor-glow { opacity: 1; }
 
 .case-study-featured{min-height:520px;grid-template-columns:minmax(0,1fr) 220px;grid-template-areas:"number result" "content result";grid-template-rows:auto 1fr;gap:24px 60px}
 .case-study-featured>.case-number{grid-area:number}.case-study-featured>div:nth-child(2){grid-area:content}.case-study-featured>.case-result{grid-area:result;justify-content:center;margin:0;padding:0 0 0 42px;border:0;border-left:1px solid var(--line-dark)}.case-study-featured h2{margin-top:34px}
+
+.case-study-ai,.case-study-agent{border-color:rgba(57,114,255,.28);background:radial-gradient(circle at 100% 0,rgba(57,114,255,.3),transparent 42%),#10131b;color:var(--white)}
+.case-study-agent{background:radial-gradient(circle at 100% 0,rgba(216,255,99,.15),transparent 38%),#11141a}
+.case-study-data{background:var(--blue);color:var(--white);border-color:transparent}.case-study-bi{background:var(--lime);color:var(--ink);border-color:transparent}
+.case-study-ai .case-number,.case-study-agent .case-number,.case-study-data .case-number{color:var(--lime)}.case-study-bi .case-number{color:#3156c9}
+.case-study-ai>p,.case-study-agent>p,.case-study-data>p{color:rgba(255,255,255,.7)}.case-study-bi>p{color:rgba(9,10,14,.66)}
+.case-study-ai .case-result,.case-study-agent .case-result,.case-study-data .case-result{border-color:var(--line-dark)}.case-study-bi .case-result{border-color:rgba(9,10,14,.16)}
+.case-study-ai .case-result span,.case-study-agent .case-result span,.case-study-data .case-result span{color:rgba(255,255,255,.62)}.case-study-bi .case-result span{color:rgba(9,10,14,.62)}
+.case-study-ai .project-tags span,.case-study-agent .project-tags span,.case-study-data .project-tags span{border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.68)}.case-study-bi .project-tags span{border-color:rgba(9,10,14,.2);color:rgba(9,10,14,.64)}
+.case-result strong.is-wordmark{font-size:42px;letter-spacing:-.045em}
 
 .ai-approach-grid article{min-height:430px;display:flex;flex-direction:column}.ai-approach-grid h3{margin-top:72px}.ai-approach-grid ul{margin:auto 0 0;padding:22px 0 0;border-top:1px solid var(--line-dark);list-style:none}.ai-approach-grid li{padding:5px 0;color:#737781;font:400 8px/1.45 "DM Mono",monospace}.ai-approach-grid li::before{content:"↳ ";color:var(--lime)}
 
