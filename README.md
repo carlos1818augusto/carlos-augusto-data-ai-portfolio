@@ -16,6 +16,8 @@ O site apresenta uma narrativa integrada de quatro disciplinas complementares:
 - Experiência, formação e certificações
 - Download dos currículos em português e inglês
 - Layout responsivo, acessível e sem dependências de framework
+- Arquitetura multipágina, com navegação dedicada para especialidades, projetos, IA, trajetória e contato
+- Retratos editoriais próprios para cada contexto, mantendo a foto original como referência
 - Pronto para GitHub Pages
 
 ## Executar localmente
@@ -40,10 +42,19 @@ Depois acesse `http://localhost:4173`.
 ```text
 .
 ├── index.html
+├── especialidades/index.html
+├── projetos/index.html
+├── ia/index.html
+├── trajetoria/index.html
+├── sobre/index.html
 ├── styles.css
 ├── script.js
 └── assets
     ├── carlos-augusto.jpg
+    ├── carlos-hero-cheerful.webp
+    ├── carlos-data-studio.webp
+    ├── carlos-ai-studio.webp
+    ├── carlos-career.webp
     ├── favicon.svg
     └── docs
         ├── curriculo-carlos-augusto-pt.pdf

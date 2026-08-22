@@ -275,9 +275,12 @@ function translatePage(language) {
   if (!dictionary) return;
   currentLanguage = language;
   document.documentElement.lang = language === 'pt' ? 'pt-BR' : 'en';
-  document.title = dictionary.meta.title;
-  document.querySelector('meta[name="description"]')?.setAttribute('content', dictionary.meta.description);
-  document.querySelector('meta[property="og:description"]')?.setAttribute('content', dictionary.meta.description);
+  const suffix = language === 'pt' ? 'Pt' : 'En';
+  const pageTitle = document.body.dataset[`title${suffix}`] || dictionary.meta.title;
+  const pageDescription = document.body.dataset[`description${suffix}`] || dictionary.meta.description;
+  document.title = pageTitle;
+  document.querySelector('meta[name="description"]')?.setAttribute('content', pageDescription);
+  document.querySelector('meta[property="og:description"]')?.setAttribute('content', pageDescription);
 
   document.querySelectorAll('[data-i18n]').forEach((element) => {
     const value = getTranslation(dictionary, element.dataset.i18n);
@@ -296,15 +299,24 @@ function translatePage(language) {
     if (value !== undefined) element.setAttribute('alt', value);
   });
 
+  document.querySelectorAll('[data-copy-pt][data-copy-en]').forEach((element) => {
+    element.textContent = language === 'pt' ? element.dataset.copyPt : element.dataset.copyEn;
+  });
+  document.querySelectorAll('[data-copy-html-pt][data-copy-html-en]').forEach((element) => {
+    element.innerHTML = language === 'pt' ? element.dataset.copyHtmlPt : element.dataset.copyHtmlEn;
+  });
+
   document.querySelectorAll('[data-lang]').forEach((button) => {
     const active = button.dataset.lang === language;
     button.classList.toggle('active', active);
     button.setAttribute('aria-pressed', String(active));
   });
-  const resume = document.querySelector('[data-resume-link]');
-  if (resume) resume.href = language === 'pt'
-    ? 'assets/docs/curriculo-carlos-augusto-pt.pdf'
-    : 'assets/docs/carlos-augusto-resume-en.pdf';
+  const base = document.body.dataset.base || '';
+  document.querySelectorAll('[data-resume-link]').forEach((resume) => {
+    resume.href = language === 'pt'
+      ? `${base}assets/docs/curriculo-carlos-augusto-pt.pdf`
+      : `${base}assets/docs/carlos-augusto-resume-en.pdf`;
+  });
 
   try { localStorage.setItem('portfolio-language', language); } catch (_) {}
 }
@@ -420,4 +432,6 @@ document.querySelectorAll('[data-case]').forEach((button) => {
 document.querySelector('[data-modal-close]')?.addEventListener('click', closeModal);
 modal?.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
 
-document.querySelector('[data-year]').textContent = new Date().getFullYear();
+document.querySelectorAll('[data-year]').forEach((element) => {
+  element.textContent = new Date().getFullYear();
+});
