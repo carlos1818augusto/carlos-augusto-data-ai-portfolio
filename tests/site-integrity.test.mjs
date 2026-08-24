@@ -66,3 +66,41 @@ test("downloadable resumes are present in both languages", () => {
   assert.ok(existsSync(join(projectRoot, "assets/docs/curriculo-carlos-augusto-pt.pdf")));
   assert.ok(existsSync(join(projectRoot, "assets/docs/carlos-augusto-resume-en.pdf")));
 });
+
+test("all project cards open bilingual detailed case modals", () => {
+  const projectPage = readFileSync(join(projectRoot, "projetos/index.html"), "utf8");
+  const script = readFileSync(join(projectRoot, "script.js"), "utf8");
+  const expectedCases = [
+    "finance",
+    "automation",
+    "pipeline",
+    "forecast",
+    "rag",
+    "whatsappAgent",
+    "dataPlatform",
+    "powerBiCockpit",
+  ];
+
+  const projectCases = [...projectPage.matchAll(/data-case=["']([^"']+)["']/g)].map(
+    (match) => match[1],
+  );
+  assert.deepEqual(projectCases, expectedCases);
+
+  for (const caseName of expectedCases) {
+    assert.match(script, new RegExp(`\\n\\s{2}${caseName}: \\{`), `missing case data: ${caseName}`);
+  }
+
+  for (const field of ["challenge", "approach", "architecture", "delivery", "impact", "tags"]) {
+    assert.match(projectPage, new RegExp(`data-modal-${field}`), `missing modal field: ${field}`);
+  }
+});
+
+test("floating WhatsApp contact includes a visible nudge and interaction-safe sound", () => {
+  const script = readFileSync(join(projectRoot, "script.js"), "utf8");
+  const styles = readFileSync(join(projectRoot, "styles.css"), "utf8");
+
+  assert.match(script, /float-contact-nudge/);
+  assert.match(script, /AudioContext/);
+  assert.match(script, /portfolio-contact-nudge/);
+  assert.match(styles, /\.float-contact\.is-noticing/);
+});

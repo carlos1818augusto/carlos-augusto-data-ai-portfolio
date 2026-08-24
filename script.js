@@ -12,7 +12,7 @@ const translations = {
     nav: { home: 'Home', vision: 'Visão', expertise: 'Especialidades', projects: 'Projetos', career: 'Trajetória', about: 'Sobre', resume: 'Currículo' },
     hero: {
       available: 'Aberto a oportunidades e projetos', eyebrow: 'Data & AI Specialist · Belo Horizonte, Brasil',
-      title: 'Da fonte ao modelo.<br />Da <em>inteligência</em> à decisão.',
+      title: 'Da fonte ao modelo.<br /><span class="mobile-title-space"> </span>Da <em>inteligência</em> à decisão.',
       lead: 'Projeto ecossistemas de dados e IA que conectam pipelines, analytics, machine learning e LLMs para transformar complexidade técnica em decisões confiáveis.',
       ctaProjects: 'Explorar projetos', ctaTalk: 'Vamos conversar', focusLabel: 'Foco', focus: 'Sistemas de decisão inteligentes',
       context: 'contexto, avaliação, ação', pipeline: 'Pipeline ativo',
@@ -95,7 +95,10 @@ const translations = {
     footer: {
       statement: 'Engenharia de Dados, Analytics, Ciência de Dados e Engenharia de IA conectadas para criar sistemas de decisão.', top: 'Voltar ao topo ↑',
     },
-    modal: { challenge: 'O desafio', approach: 'A abordagem', impact: 'Impacto' },
+    modal: {
+      challenge: 'O desafio', approach: 'A solução', architecture: 'Arquitetura e fluxo',
+      delivery: 'O que foi entregue', impact: 'Impacto',
+    },
   },
 
   en: {
@@ -111,7 +114,7 @@ const translations = {
     nav: { home: 'Home', vision: 'Vision', expertise: 'Expertise', projects: 'Projects', career: 'Career', about: 'About', resume: 'Resume' },
     hero: {
       available: 'Open to opportunities and projects', eyebrow: 'Data & AI Specialist · Belo Horizonte, Brazil',
-      title: 'From source to model.<br />From <em>intelligence</em> to decision.',
+      title: 'From source to model.<br /><span class="mobile-title-space"> </span>From <em>intelligence</em> to decision.',
       lead: 'I design data and AI ecosystems that connect pipelines, analytics, machine learning and LLMs to turn technical complexity into reliable decisions.',
       ctaProjects: 'Explore projects', ctaTalk: 'Let’s talk', focusLabel: 'Focus', focus: 'Intelligent decision systems',
       context: 'context, evaluation, action', pipeline: 'Pipeline live',
@@ -191,7 +194,10 @@ const translations = {
     footer: {
       statement: 'Data Engineering, Analytics, Data Science and AI Engineering connected to build decision systems.', top: 'Back to top ↑',
     },
-    modal: { challenge: 'The challenge', approach: 'The approach', impact: 'Impact' },
+    modal: {
+      challenge: 'The challenge', approach: 'The solution', architecture: 'Architecture and flow',
+      delivery: 'What was delivered', impact: 'Impact',
+    },
   },
 };
 
@@ -202,6 +208,8 @@ const cases = {
       summary: 'Uma camada analítica para transformar informações financeiras complexas em visibilidade executiva e planejamento.',
       challenge: 'Orçamento, fluxo de caixa, rentabilidade e previsões exigem consistência entre fontes, regras financeiras e necessidades executivas.',
       approach: 'Modelagem de indicadores em Power BI e DAX, análise estatística, machine learning e colaboração próxima com equipes financeiras e executivas.',
+      architecture: 'Fontes financeiras e operacionais → modelo SQL → camada semântica no Power BI → medidas DAX governadas → painéis executivos.',
+      delivery: 'Modelo de dados, catálogo de KPIs, dashboards financeiros, regras de validação e documentação para atualização e uso executivo.',
       impact: 'Indicadores financeiros mais claros, previsões mais informadas e decisões executivas com contexto.',
       tags: ['Power BI', 'DAX', 'Financial Analytics', 'Statistics', 'Machine Learning'],
     },
@@ -210,6 +218,8 @@ const cases = {
       summary: 'An analytical layer designed to turn complex financial information into executive visibility and planning.',
       challenge: 'Budget, cash flow, profitability and forecasts require consistency across sources, financial rules and executive needs.',
       approach: 'Indicator modeling with Power BI and DAX, statistical analysis, machine learning and close collaboration with financial and executive teams.',
+      architecture: 'Financial and operational sources → SQL model → Power BI semantic layer → governed DAX measures → executive dashboards.',
+      delivery: 'Data model, KPI catalog, financial dashboards, validation rules and documentation for refresh and executive use.',
       impact: 'Clearer financial indicators, better-informed forecasts and context-rich executive decisions.',
       tags: ['Power BI', 'DAX', 'Financial Analytics', 'Statistics', 'Machine Learning'],
     },
@@ -220,6 +230,8 @@ const cases = {
       summary: 'Um dashboard financeiro automatizado que integra APIs e Power BI para disponibilizar indicadores com mais rapidez.',
       challenge: 'A atualização manual consumia tempo operacional e atrasava o acesso aos indicadores financeiros.',
       approach: 'Integração de APIs, organização das fontes, automação da atualização e camada visual orientada a KPIs.',
+      architecture: 'APIs e bancos → validação de esquema → ETL incremental → atualização agendada → modelo semântico → Power BI.',
+      delivery: 'Pipeline automatizado, tratamento de falhas, registro de atualização, painel de acompanhamento e documentação operacional.',
       impact: '40% menos tempo de atualização manual.', tags: ['Power BI', 'APIs', 'Automation', 'Financial Data'],
     },
     en: {
@@ -227,6 +239,8 @@ const cases = {
       summary: 'An automated financial dashboard integrating APIs and Power BI to make indicators available faster.',
       challenge: 'Manual updates consumed operational time and delayed access to financial indicators.',
       approach: 'API integration, source organization, refresh automation and a KPI-oriented visual layer.',
+      architecture: 'APIs and databases → schema validation → incremental ETL → scheduled refresh → semantic model → Power BI.',
+      delivery: 'Automated pipeline, failure handling, refresh log, monitoring view and operational documentation.',
       impact: '40% less manual update time.', tags: ['Power BI', 'APIs', 'Automation', 'Financial Data'],
     },
   },
@@ -236,6 +250,8 @@ const cases = {
       summary: 'Estrutura de dados e monitoramento de KPIs desenvolvida para reduzir atrito entre fonte, relatório e decisão.',
       challenge: 'O fluxo analítico exigia consolidação complexa e tornava lenta a leitura contínua dos indicadores.',
       approach: 'Pipelines com SQL e Power BI, padronização dos dados e construção de dashboards de alto impacto para gestão.',
+      architecture: 'Fontes operacionais → ingestão → staging → transformações SQL → testes de qualidade → modelo analítico → dashboards.',
+      delivery: 'Camadas de dados padronizadas, rotinas de carga, validações, monitoramento de KPIs e documentação de linhagem.',
       impact: '30% de redução no tempo de análise.', tags: ['SQL', 'ETL', 'Power BI', 'KPIs', 'Data Modeling'],
     },
     en: {
@@ -243,6 +259,8 @@ const cases = {
       summary: 'A data and KPI monitoring structure built to reduce friction between source, report and decision.',
       challenge: 'The analytical flow required complex consolidation and slowed continuous indicator monitoring.',
       approach: 'SQL and Power BI pipelines, data standardization and high-impact management dashboards.',
+      architecture: 'Operational sources → ingestion → staging → SQL transformations → quality tests → analytical model → dashboards.',
+      delivery: 'Standardized data layers, load routines, validations, KPI monitoring and lineage documentation.',
       impact: '30% reduction in analysis time.', tags: ['SQL', 'ETL', 'Power BI', 'KPIs', 'Data Modeling'],
     },
   },
@@ -252,6 +270,8 @@ const cases = {
       summary: 'Um modelo preditivo em Python para apoiar planejamento de vendas com sinais quantitativos.',
       challenge: 'A projeção comercial precisava capturar padrões históricos e reduzir a incerteza do planejamento.',
       approach: 'Preparação dos dados, modelagem preditiva, avaliação de desempenho e tradução dos resultados para o contexto comercial.',
+      architecture: 'Histórico de vendas → limpeza e atributos → divisão temporal → treinamento e comparação de modelos → previsão → painel de acompanhamento.',
+      delivery: 'Pipeline de preparação, modelo versionado, métricas de avaliação, análise de erros e comunicação visual para o time comercial.',
       impact: '20% de aumento na assertividade das previsões.', tags: ['Python', 'Machine Learning', 'Forecasting', 'Model Evaluation'],
     },
     en: {
@@ -259,7 +279,97 @@ const cases = {
       summary: 'A predictive Python model supporting sales planning with quantitative signals.',
       challenge: 'Commercial projections needed to capture historical patterns and reduce planning uncertainty.',
       approach: 'Data preparation, predictive modeling, performance evaluation and translation of results into commercial context.',
+      architecture: 'Sales history → cleaning and features → temporal split → model training and comparison → forecast → monitoring dashboard.',
+      delivery: 'Preparation pipeline, versioned model, evaluation metrics, error analysis and visual communication for the sales team.',
       impact: '20% increase in forecast accuracy.', tags: ['Python', 'Machine Learning', 'Forecasting', 'Model Evaluation'],
+    },
+  },
+  rag: {
+    pt: {
+      index: 'CASE 05 — IA CONVERSACIONAL · RAG', title: 'Chatbot que responde com contexto e evidência.',
+      summary: 'Uma arquitetura conversacional para consultar documentos e bases internas sem depender apenas da memória do modelo.',
+      challenge: 'As respostas precisavam refletir conhecimento atualizado, respeitar permissões e reduzir afirmações sem fonte.',
+      approach: 'Preparação documental, busca híbrida, recuperação com metadados, reranking, geração com citações e avaliação contínua.',
+      architecture: 'Documentos e APIs → limpeza e chunking → embeddings → banco vetorial → retrieval e reranking → LLM → avaliações e feedback.',
+      delivery: 'Pipeline de indexação, API de consulta, interface conversacional, conjunto de avaliações, guardrails e observabilidade de custo e qualidade.',
+      impact: 'Respostas rastreáveis, conhecimento atualizável e uma base segura para atendimento e consulta interna.',
+      tags: ['LLM', 'RAG', 'Vector Search', 'Evals', 'Python', 'Guardrails'],
+    },
+    en: {
+      index: 'CASE 05 — CONVERSATIONAL AI · RAG', title: 'A chatbot that answers with context and evidence.',
+      summary: 'A conversational architecture for searching internal documents and data without relying only on model memory.',
+      challenge: 'Answers needed to reflect current knowledge, respect permissions and reduce unsupported claims.',
+      approach: 'Document preparation, hybrid search, metadata-aware retrieval, reranking, cited generation and continuous evaluation.',
+      architecture: 'Documents and APIs → cleaning and chunking → embeddings → vector database → retrieval and reranking → LLM → evaluation and feedback.',
+      delivery: 'Indexing pipeline, query API, conversational interface, evaluation set, guardrails and cost and quality observability.',
+      impact: 'Traceable answers, updatable knowledge and a safer foundation for customer service and internal search.',
+      tags: ['LLM', 'RAG', 'Vector Search', 'Evals', 'Python', 'Guardrails'],
+    },
+  },
+  whatsappAgent: {
+    pt: {
+      index: 'CASE 06 — AGENTE DE IA · WHATSAPP', title: 'Atendimento automatizado com supervisão humana.',
+      summary: 'Um agente integrado ao WhatsApp para compreender solicitações, consultar sistemas e executar tarefas com limites claros.',
+      challenge: 'O atendimento precisava ganhar velocidade sem perder contexto, rastreabilidade ou a possibilidade de intervenção humana.',
+      approach: 'Classificação de intenção, memória de conversa, ferramentas auditáveis, regras de segurança e transferência para uma pessoa quando necessário.',
+      architecture: 'WhatsApp API → webhook → orquestração n8n → intenção e memória → ferramentas e sistemas → handoff humano → monitoramento.',
+      delivery: 'Fluxos conversacionais, integrações, registro de eventos, painel de acompanhamento, alertas e critérios de escalonamento humano.',
+      impact: 'Triagem mais rápida, atendimento contínuo e automação controlada para equipes comerciais e internas.',
+      tags: ['WhatsApp API', 'AI Agents', 'n8n', 'Webhooks', 'Tool Use', 'HITL'],
+    },
+    en: {
+      index: 'CASE 06 — AI AGENT · WHATSAPP', title: 'Automated service with human oversight.',
+      summary: 'An agent integrated with WhatsApp to understand requests, query systems and execute tasks within clear boundaries.',
+      challenge: 'Service needed to become faster without losing context, traceability or the ability for a person to intervene.',
+      approach: 'Intent classification, conversation memory, auditable tools, safety rules and human handoff whenever required.',
+      architecture: 'WhatsApp API → webhook → n8n orchestration → intent and memory → tools and systems → human handoff → monitoring.',
+      delivery: 'Conversation flows, integrations, event logging, monitoring dashboard, alerts and human escalation criteria.',
+      impact: 'Faster triage, continuous service and controlled automation for sales and internal teams.',
+      tags: ['WhatsApp API', 'AI Agents', 'n8n', 'Webhooks', 'Tool Use', 'HITL'],
+    },
+  },
+  dataPlatform: {
+    pt: {
+      index: 'CASE 07 — ENGENHARIA DE DADOS · IA', title: 'Uma plataforma de dados preparada para produtos inteligentes.',
+      summary: 'Pipelines e contratos de dados que conectam fontes operacionais, analytics e aplicações de IA em uma base observável.',
+      challenge: 'Dados distribuídos entre APIs, bancos e documentos precisavam chegar aos produtos com qualidade, contexto e rastreabilidade.',
+      approach: 'Ingestão modular, validações, linhagem, armazenamento por finalidade, indexação vetorial e monitoramento ponta a ponta.',
+      architecture: 'APIs, SQL e documentos → cargas incrementais → qualidade e linhagem → camadas analíticas e vetoriais → BI, modelos e agentes.',
+      delivery: 'Conectores reutilizáveis, contratos de dados, testes, catálogo, alertas de qualidade e documentação de operação.',
+      impact: 'Uma fundação reutilizável para reduzir retrabalho e acelerar novos produtos de dados e IA.',
+      tags: ['Python', 'SQL', 'Cloud', 'Data Quality', 'Lineage', 'Vector Search'],
+    },
+    en: {
+      index: 'CASE 07 — DATA ENGINEERING · AI', title: 'A data platform ready for intelligent products.',
+      summary: 'Pipelines and data contracts connecting operational sources, analytics and AI applications through an observable foundation.',
+      challenge: 'Data spread across APIs, databases and documents needed to reach products with quality, context and traceability.',
+      approach: 'Modular ingestion, validation, lineage, purpose-built storage, vector indexing and end-to-end monitoring.',
+      architecture: 'APIs, SQL and documents → incremental loads → quality and lineage → analytical and vector layers → BI, models and agents.',
+      delivery: 'Reusable connectors, data contracts, tests, catalog, quality alerts and operational documentation.',
+      impact: 'A reusable foundation that reduces rework and accelerates new data and AI products.',
+      tags: ['Python', 'SQL', 'Cloud', 'Data Quality', 'Lineage', 'Vector Search'],
+    },
+  },
+  powerBiCockpit: {
+    pt: {
+      index: 'CASE 08 — POWER BI · ANALYTICS', title: 'Um cockpit executivo para enxergar o negócio como um sistema.',
+      summary: 'Visão consolidada de indicadores financeiros, comerciais e operacionais, organizada para leitura rápida e decisões orientadas por dados.',
+      challenge: 'Cada área acompanhava métricas com definições e fontes diferentes, dificultando comparações e priorização executiva.',
+      approach: 'Definição conjunta dos KPIs, modelo semântico, medidas DAX governadas, segurança por perfil e storytelling orientado a decisões.',
+      architecture: 'Fontes departamentais → modelo SQL → camada semântica → medidas DAX → segurança por perfil → cockpit executivo.',
+      delivery: 'Dicionário de indicadores, modelo certificado, páginas executivas e analíticas, navegação guiada e documentação de governança.',
+      impact: 'Visão 360° com definições consistentes e menor distância entre o indicador e a ação.',
+      tags: ['Power BI', 'DAX', 'SQL', 'Semantic Model', 'KPIs', 'Governance'],
+    },
+    en: {
+      index: 'CASE 08 — POWER BI · ANALYTICS', title: 'An executive cockpit that presents the business as one system.',
+      summary: 'A consolidated view of financial, sales and operational indicators, structured for fast reading and data-driven decisions.',
+      challenge: 'Each area monitored metrics with different definitions and sources, making executive comparison and prioritization difficult.',
+      approach: 'Joint KPI definition, semantic modeling, governed DAX measures, role-based security and decision-oriented storytelling.',
+      architecture: 'Departmental sources → SQL model → semantic layer → DAX measures → role-based security → executive cockpit.',
+      delivery: 'Indicator dictionary, certified model, executive and analytical pages, guided navigation and governance documentation.',
+      impact: 'A 360° view with consistent definitions and a shorter path from indicator to action.',
+      tags: ['Power BI', 'DAX', 'SQL', 'Semantic Model', 'KPIs', 'Governance'],
     },
   },
 };
@@ -342,8 +452,65 @@ floatingContact.href = 'https://wa.me/5531999862641?text=Ol%C3%A1%20Carlos%2C%20
 floatingContact.target = '_blank';
 floatingContact.rel = 'noopener noreferrer';
 floatingContact.setAttribute('aria-label', 'Falar com Carlos no WhatsApp');
-floatingContact.innerHTML = '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span data-copy-pt="Falar no WhatsApp" data-copy-en="Chat on WhatsApp">Falar no WhatsApp</span>';
+floatingContact.innerHTML = '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span class="float-contact-label" data-copy-pt="Falar no WhatsApp" data-copy-en="Chat on WhatsApp">Falar no WhatsApp</span><span class="float-contact-nudge" role="status" data-copy-pt="Estou aqui se quiser conversar 👋" data-copy-en="I’m here if you want to talk 👋">Estou aqui se quiser conversar 👋</span>';
 document.body.append(floatingContact);
+
+let contactSoundPlayed = false;
+let contactNudgeTimer;
+
+function showContactNudge() {
+  floatingContact.classList.add('is-noticing');
+  window.clearTimeout(contactNudgeTimer);
+  contactNudgeTimer = window.setTimeout(() => floatingContact.classList.remove('is-noticing'), 5200);
+}
+
+function playContactSound(delay = 0) {
+  if (contactSoundPlayed) return;
+  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContextClass) return;
+
+  try {
+    const audioContext = new AudioContextClass();
+    const start = audioContext.currentTime + delay;
+    const gain = audioContext.createGain();
+    gain.connect(audioContext.destination);
+    gain.gain.setValueAtTime(0.0001, start);
+    gain.gain.exponentialRampToValueAtTime(0.075, start + 0.025);
+    gain.gain.exponentialRampToValueAtTime(0.0001, start + 0.42);
+
+    [660, 880].forEach((frequency, index) => {
+      const oscillator = audioContext.createOscillator();
+      oscillator.type = 'sine';
+      oscillator.frequency.value = frequency;
+      oscillator.connect(gain);
+      oscillator.start(start + (index * 0.11));
+      oscillator.stop(start + 0.26 + (index * 0.11));
+    });
+
+    if (audioContext.state === 'suspended') audioContext.resume();
+    window.setTimeout(() => audioContext.close(), (delay + 0.8) * 1000);
+    contactSoundPlayed = true;
+    floatingContact.dataset.soundPlayed = 'true';
+  } catch (_) {}
+}
+
+function activateContactNudge() {
+  let alreadySeen = false;
+  try { alreadySeen = sessionStorage.getItem('portfolio-contact-nudge') === 'seen'; } catch (_) {}
+  if (alreadySeen) return;
+  try { sessionStorage.setItem('portfolio-contact-nudge', 'seen'); } catch (_) {}
+  playContactSound(0.65);
+  window.setTimeout(showContactNudge, 650);
+}
+
+document.addEventListener('pointerdown', activateContactNudge, { once: true, passive: true });
+document.addEventListener('keydown', activateContactNudge, { once: true });
+floatingContact.addEventListener('mouseenter', showContactNudge);
+floatingContact.addEventListener('focus', showContactNudge);
+floatingContact.addEventListener('click', () => {
+  playContactSound();
+  showContactNudge();
+});
 translatePage(initialLanguage);
 
 const header = document.querySelector('[data-header]');
@@ -428,19 +595,27 @@ if (!prefersReducedMotion && glow && window.matchMedia('(pointer: fine)').matche
 const modal = document.querySelector('[data-modal]');
 function closeModal() { if (modal?.open) modal.close(); }
 
+function openCaseModal(caseKey) {
+  const item = cases[caseKey]?.[currentLanguage];
+  if (!item || !modal) return;
+  const setText = (selector, value) => {
+    const element = modal.querySelector(selector);
+    if (element) element.textContent = value || '';
+  };
+  setText('[data-modal-index]', item.index);
+  setText('[data-modal-title]', item.title);
+  setText('[data-modal-summary]', item.summary);
+  setText('[data-modal-challenge]', item.challenge);
+  setText('[data-modal-approach]', item.approach);
+  setText('[data-modal-architecture]', item.architecture);
+  setText('[data-modal-delivery]', item.delivery);
+  setText('[data-modal-impact]', item.impact);
+  modal.querySelector('[data-modal-tags]').innerHTML = item.tags.map((tag) => `<span>${tag}</span>`).join('');
+  modal.showModal();
+}
+
 document.querySelectorAll('[data-case]').forEach((button) => {
-  button.addEventListener('click', () => {
-    const item = cases[button.dataset.case]?.[currentLanguage];
-    if (!item || !modal) return;
-    modal.querySelector('[data-modal-index]').textContent = item.index;
-    modal.querySelector('[data-modal-title]').textContent = item.title;
-    modal.querySelector('[data-modal-summary]').textContent = item.summary;
-    modal.querySelector('[data-modal-challenge]').textContent = item.challenge;
-    modal.querySelector('[data-modal-approach]').textContent = item.approach;
-    modal.querySelector('[data-modal-impact]').textContent = item.impact;
-    modal.querySelector('[data-modal-tags]').innerHTML = item.tags.map((tag) => `<span>${tag}</span>`).join('');
-    modal.showModal();
-  });
+  button.addEventListener('click', () => openCaseModal(button.dataset.case));
 });
 document.querySelector('[data-modal-close]')?.addEventListener('click', closeModal);
 modal?.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
