@@ -336,3 +336,85 @@ body:hover .cursor-glow { opacity: 1; }
 @media (max-width:1120px){.main-nav{gap:12px}.main-nav a{font-size:9px}.professional-grid{grid-template-columns:1fr 1fr}.case-study-featured{grid-template-columns:minmax(0,1fr) 190px;grid-template-areas:"number result" "content result"}}
 @media (max-width:820px){.professional-method{padding:92px 0}.professional-grid{grid-template-columns:1fr}.professional-card{min-height:340px}.professional-card h3{margin-top:65px}.professional-cta{align-items:flex-start;flex-direction:column}.case-study-featured{grid-template-columns:1fr;grid-template-areas:"number" "content" "result"}.case-study-featured>.case-result{padding:30px 0 0;border-left:0;border-top:1px solid var(--line-dark)}.hero-orb{width:46px;height:46px}.hero-orb-database{top:55px;left:3px}.hero-orb-bi{top:265px;left:0}.hero-orb-ml{top:300px;right:0}.float-contact{right:16px;bottom:16px;width:54px;height:54px}.float-contact-label{display:none}.float-contact-nudge{right:0;bottom:66px}.mobile-title-space{display:inline}}
 @media (max-width:520px){.hero-orb-database{top:45px}.hero-orb-bi{top:240px}.hero-orb-ml{display:none}.professional-card{padding:26px}}
+
+/* Legibility pass: keep the editorial hierarchy without micro-sized copy. */
+.brand-copy small{font-size:10px;color:#9598a1}
+.main-nav a{font-size:12px}
+.language-button{font-size:11px}
+.header-resume{font-size:12px}
+.availability{font-size:11px}
+.eyebrow{font-size:12px}
+.button{font-size:13px}
+.hero-role-list span{font-size:10px}
+.portrait-topline,.portrait-caption small{font-size:10px}
+.float-card-ai small,.float-card-ai span{font-size:10px}
+.float-card-data strong{font-size:12px}.float-card-data small{font-size:10px}
+.hero-marquee span{font-size:10px}
+.outcome-card p{font-size:14px}
+.section-index{font-size:11px}
+.hand-note{font-size:11px}
+.system-sources span,.map-label{font-size:10px}
+.layer-number{font-size:10px}
+.system-layer p{font-size:13px}
+.layer-tags span{font-size:10px}
+.system-output span{font-size:10px}.system-output strong{font-size:12px}
+.expertise-top span{font-size:11px}
+.expertise-card ul{font-size:13px}
+.expertise-stack{font-size:10px}
+.rag-head strong{font-size:11px}.rag-head small{font-size:10px}
+.rag-flow article>span{font-size:10px}.rag-flow article>strong{font-size:13px}.rag-flow article>small{font-size:11px}
+.rag-foot{font-size:10px}
+.approach-card>span{font-size:10px}.approach-card p{font-size:13px}
+.project-meta{font-size:10px}
+.project-card>p,.project-content p{font-size:14px}
+.project-impact span{font-size:12px}
+.case-button{font-size:12px}
+.project-tags span{font-size:10px}
+.finance-kpis small,.finance-kpis em{font-size:10px}
+.timeline-date span,.timeline-role small{font-size:10px}
+.timeline-desc>p{font-size:14px}.timeline-desc span{font-size:10px}
+.credential-label,.education-column article span{font-size:10px}
+.education-column article p,.languages span{font-size:13px}
+.certification-column li span,.certification-column li small{font-size:10px}
+.certification-column li strong{font-size:13px}.more-certs{font-size:12px}
+.about-photo span{font-size:10px}
+.about-columns p{font-size:14px}.about blockquote{font-size:13px}
+.contact-kicker{font-size:12px}.contact-link{font-size:13px}.resume-downloads a{font-size:11px}
+.footer-top>p{font-size:13px}.footer-links{font-size:12px}.footer-bottom{font-size:10px}
+.modal-index{font-size:10px}
+.modal-grid span,.modal-impact span{font-size:10px;color:#a3a6af}
+.modal-grid p{font-size:14px}.modal-tags span{font-size:10px}
+.breadcrumb{font-size:11px}
+.subpage-media span{font-size:10px}
+.hero-metric-stack span{font-size:12px}
+.discipline-detail>span,.case-number{font-size:10px}
+.discipline-detail p{font-size:14px}.discipline-detail li{font-size:12px}
+.value-chain article span,.architecture-flow article span{font-size:10px}
+.value-chain article small,.architecture-flow article small{font-size:12px}
+.case-study>p,.case-study>div>p{font-size:14px}
+.case-columns span{font-size:10px}
+.case-result span{font-size:11px}
+.case-study-action{font-size:12px}
+.architecture-rails{font-size:11px}
+.ai-approach-grid article>span,.principle-grid article>span{font-size:10px}
+.ai-approach-grid p,.principle-grid p{font-size:13px}
+.quality-grid strong{font-size:13px}.quality-grid span{font-size:12px}
+.resume-band p{font-size:11px}
+.about-story-media span{font-size:10px}
+.story-columns p{font-size:14px}.about-story blockquote{font-size:13px}
+.professional-card>span{font-size:10px}
+.professional-card p{font-size:13px}.professional-card small{font-size:10px}
+.ai-approach-grid li{font-size:11px}
+.hero-orb span{font-size:10px}
+.float-contact-label{font-size:10px}
+.float-contact-nudge{font-size:12px;max-width:min(285px,calc(100vw - 32px))}
+
+@media (max-width:1120px) and (min-width:821px){.main-nav a{font-size:11px}}
+@media (max-width:820px){
+  .main-nav a{font-size:28px}
+  .hero-lead{font-size:16px}
+  .case-modal{padding:46px 24px 30px}
+  .modal-grid{gap:18px}
+  .modal-grid p{font-size:14px;line-height:1.75}
+  .float-contact-nudge{font-size:13px}
+}
